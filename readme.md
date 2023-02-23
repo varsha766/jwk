@@ -15,9 +15,9 @@ npm run dev
 To generate private key
 
 ```
+create a certs folder
 cd certs
- openssl genrsa -out private.pem 3072
- // 3072 is keys bit size. 2048 can also be used
+openssl genrsa -out private.pem 3072   // 3072 is keys bit size. 2048 can also be used
 ```
 
 To generate public key of above private key
@@ -29,8 +29,7 @@ openssl rsa -in private.pem -pubout -out public.pem
 To create json web key-set
 
 ```
-node jwkpem.js
-//store the generated key set in public/jwks.json folder under keys section
+node jwkpem.js  //store the generated key set in public/jwks.json folder under keys section
 ```
 
 #### To run the resource server
